@@ -53,12 +53,14 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-serif: "Times New Roman", Times, serif;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --bs-font-monospace:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
   --bs-gradient: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.15),
@@ -274,4 +276,91 @@ a:hover {
 
 .global-nav {
   display: none;
+}
+
+.disclaimer {
+  padding: 0 1rem;
+}
+
+.intro,
+.info {
+  padding: 0 1rem;
+}
+
+.intro h1 {
+  font-family: var(--bs-font-serif);
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.intro p {
+  margin: 0 0 2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.media-card a:link,
+.media-card a:visited {
+  color: var(--bs-black);
+  text-decoration: none;
+}
+
+.media-card a:hover .media-card__title {
+  text-decoration: underline;
+}
+
+.media-card__title {
+  font-size: 1.2rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.media-card p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--bs-grey-5);
+  margin: 0;
+}
+
+.media-card__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+#park-footer {
+  background-color: var(--bs-pampas);
+  background-image: url("/images/topo_pattern.png");
+  background-repeat: repeat;
+  padding: 1.5rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+.contact h3 {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.contact h4 {
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.contact p {
+  margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .info {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }
