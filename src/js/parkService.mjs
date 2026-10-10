@@ -24,7 +24,7 @@ const parkInfoLinks = [
   },
 ];
 
-export async function getParkData() {
+async function getJson(url) {
   const options = {
     method: "GET",
     headers: {
@@ -32,11 +32,16 @@ export async function getParkData() {
     },
   };
   let data = {};
-  const response = await fetch(baseUrl + "parks?parkCode=glac", options);
-  if (response.ok) {                                                        
-    data = await response.json();                                          
-  } else throw new Error("response not ok");                                
-  return data.data[0];                                                           
+  const response = await fetch(baseUrl + url, options);
+  if (response.ok) {
+    data = await response.json();
+  } else throw new Error("response not ok");
+  return data;
+}
+
+export async function getParkData() {
+  const parkData = await getJson("parks?parkCode=glac");
+  return parkData.data[0];
 }
 
 export function getInfoLinks(images) {
