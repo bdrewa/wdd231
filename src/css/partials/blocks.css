@@ -1,0 +1,29 @@
+/* Media card */
+.media-card a:link,
+.media-card a:visited {
+  color: var(--bs-black);
+  text-decoration: none;
+}
+
+.media-card a:hover .media-card__title {
+  text-decoration: underline;
+}
+
+.media-card__title {
+  font-size: 1.2rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.media-card p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--bs-grey-5);
+  margin: 0;
+}
+
+.media-card__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
